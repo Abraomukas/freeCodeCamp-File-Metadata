@@ -1,0 +1,33 @@
+{
+	"name": "fcc-file-metadata",
+	"version": "0.1.0",
+	"description": "A REST API project, part of Free Code Camp's curriculum",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Abraomukas/freeCodeCamp-File-Metadata.git"
+	},
+	"keywords": [
+		"freeCodeCamp",
+		"node",
+		"express"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Abraomukas/freeCodeCamp-File-Metadata/issues"
+	},
+	"homepage": "https://github.com/Abraomukas/freeCodeCamp-File-Metadata#readme",
+	"dependencies": {
+		"body-parser": "^1.20.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20"
+	}
+}
