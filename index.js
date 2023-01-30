@@ -30,7 +30,6 @@ app.post('/api/fileanalyse', (req, res) => {
 			let fileType = req.files.upfile.mimetype;
 			let fileSize = req.files.upfile.size;
 
-			console.log(req.files);
 			res.json({ name: fileName, type: fileType, size: fileSize });
 		}
 	} catch (err) {
