@@ -23,13 +23,14 @@ app.get('/', function (req, res) {
  */
 app.post('/api/fileanalyse', (req, res) => {
 	try {
-		if (!req.files) {
-			res.json({ status: 412, message: 'No file was uploaded!' });
+		if (!req.files || Object.keys(req.files).length === 0) {
+			res.send.status(400).send('No file was uploaded!');
 		} else {
-			let fileName = req.files.name;
-			let fileType = req.files.mimetype;
-			let fileSize = req.files.size;
+			let fileName = req.files.upfile.name;
+			let fileType = req.files.upfile.mimetype;
+			let fileSize = req.files.upfile.size;
 
+			console.log(req.files);
 			res.json({ name: fileName, type: fileType, size: fileSize });
 		}
 	} catch (err) {
